@@ -1,0 +1,6 @@
+Workflow: - 
+The doctor provides feedback in the form of a record in DynamoDB.
+The Lambda function is triggered by a DynamoDB stream, reads the feedback, and retrieves the relevant patient information from DynamoDB.
+The Lambda function formats the push notification using the patient information and the doctor feedback, and sends the notification to the relevant patient via SNS.
+The patient receives the push notification on their mobile app.
+This architecture provides a scalable, secure, and highly available solution for sending notifications to patients based on doctor feedback.
